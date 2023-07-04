@@ -7,34 +7,35 @@ import {
   LogoSpan,
   NavList,
 } from './Header.styled';
+import { NavLink } from 'react-router-dom';
 
 export const Header = () => {
   return (
     <HeaderStyled>
       <Container>
-        <Logo href="/">
+        <Logo to="/">
           <LogoSpan>M</LogoSpan>Ints
         </Logo>
         <nav>
           <NavList>
             <HeaderItem>
-              <a href="/interests">Interests</a>
+              <NavLink to="/interests">Interests</NavLink>
             </HeaderItem>
             <HeaderItem>
-              <a href="/profile">Profile</a>
+              <NavLink to="/profile">Profile</NavLink>
             </HeaderItem>
             <HeaderItem>
-              <a href="/friends">Friends</a>
+              <NavLink to="/friends">Friends</NavLink>
             </HeaderItem>
           </NavList>
         </nav>
 
         <AuthList>
           <HeaderItem>
-            <a href="/register">Register</a>
+            <NavLink to="/register">Register</NavLink>
           </HeaderItem>
           <HeaderItem>
-            <a href="/login">Login</a>
+            <NavLink to="/login">Login</NavLink>
           </HeaderItem>
         </AuthList>
       </Container>

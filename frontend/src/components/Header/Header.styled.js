@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { theme } from '../../theme/theme';
+import { NavLink } from 'react-router-dom';
 
 export const HeaderStyled = styled.header`
   border-bottom: 1px solid ${theme.color.headerBorder};
@@ -30,11 +31,14 @@ export const LogoSpan = styled.span`
   color: ${theme.color.brand};
 `;
 
-export const Logo = styled.a`
+export const Logo = styled(NavLink)`
   font-size: 26px;
   font-weight: 500;
 `;
 
 export const HeaderItem = styled.li`
   font-size: 18px;
+  :hover {
+    color: ${theme.color.brand};
+  }
 `;
